@@ -4,6 +4,7 @@ import time
 
 # explanation of 'with' http://effbot.org/zone/python-with-statement.htm
 with open('tempfile', 'w') as f:
+    # does not work without a proper file handle
     blocking_lock = flock.Flock(f, flock.LOCK_EX)
 
     with blocking_lock:
